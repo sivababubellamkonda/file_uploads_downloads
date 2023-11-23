@@ -25,7 +25,8 @@ import com.inc.File_Uploads.service.FileService;
 public class FileController {
 	@Autowired
 	private FileService serv;
-
+	
+	//To save new file into database
 	@PostMapping("/upload")
 	public ResponseEntity<File_Entity> uploadFile(@RequestParam("f") MultipartFile file) throws IOException {
 		return serv.uploadServ(file);
